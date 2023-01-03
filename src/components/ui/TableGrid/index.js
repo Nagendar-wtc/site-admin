@@ -1,24 +1,26 @@
 import React, { useState, useRef, useEffect } from "react";
-import { DataTable } from "primereact/datatable";
+
+//@prime react
 import { Column } from "primereact/column";
-import "./style.scss";
+import { DataTable } from "primereact/datatable";
 import { FilterMatchMode } from 'primereact/api';
 import { ColumnGroup } from 'primereact/columngroup';
 
+//@custom styles
+import "./style.scss";
 
-
+//@functional component
 const TableGrid = (props) => {
   let {
-    tableData,
-    tableTopHeader,
-    columnHeaders,
-    // selectedRows = () => {},
-    selection = false,
-    stripedRows = false,
-    paginator = false,
     dataKey,
+    tableData,
+    columnHeaders,
+    tableTopHeader,
+    selection = false,
+    paginator = false,
+    stripedRows = false,
   } = props;
-  // const [selectedProducts, setSelectedProducts] = useState(null);
+
   const dt = useRef(null);
   const [filters, setFilters] = useState();
 
@@ -30,101 +32,84 @@ const TableGrid = (props) => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   selectedRows(selectedProducts);
-  // }, [selectedProducts, selectedRows]);
-
   const getColumns = (_columnHeaders = []) => {
     let columns = [];
+
     _columnHeaders.forEach((header) => {
+      let propObj = { key: header.field, style: header.style, };
+
       if (header.selectionMode) {
-        columns.push(
-          <Column
-            key={header.field}
-            selectionMode={header.selectionMode}
-            style={header.style}
-          />
-        );
-      } else if (header.component) {
-        columns.push(
-          <Column
-            key={header.field}
-            body={header.component}
-            header={header.headerName}
-            style={header.style}
-            showFilterMatchModes={false}
-            sortable={header.sortable}
-            filter={header.filter || false}
-            filterElement={(options) => header.filterTemplate(options)}
-          ></Column>
-        );
+        propObj.selectionMode = header.selectionMode;
       } else {
-        columns.push(
-          <Column
-            key={header.field}
-            field={header.field}
-            header={header.headerName}
-            sortable={header.sortable}
-            style={header.style}
-            showFilterMatchModes={false}
-            filter={header.filter || false}
-            filterElement={(options) => header.filterTemplate(options)}
-          />
-        );
+        propObj = {
+          ...propObj,
+          field: header.field,
+          sortable: header.sortable,
+          header: header.headerName,
+          showFilterMatchModes: false,
+          filter: header.filter || false,
+          filterElement: (options) => header.filterTemplate(options),
+        };
+
+        if (header.component) {
+          propObj = { ...propObj, body: header.component, };
+        } else {
+          propObj = { ...propObj, field: header.field, };
+        }
       }
+
+      columns.push(<Column {...propObj} />);
     });
+
     return columns;
   };
-  let headerGroup = (
+
+  const headerGroup = (
     <ColumnGroup>
       {tableTopHeader}
-
       <>{getColumns(columnHeaders)}</>
     </ColumnGroup>
   );
 
+  const tableProps = () => {
+    let propObj = {
+      ref: dt,
+      dataKey,
+      rows: 15,
+      stripedRows,
+      value: tableData,
+      showGridlines: true,
+      resizableColumns: true,
+      columnResizeMode: "fit",
+      responsiveLayout: "scroll",
+    };
+
+    if (selection) {
+      propObj = {
+        ...propObj,
+        filters,
+        paginator,
+        filterDisplay: "menu",
+        selectionMode: "checkbox",
+        columnResizeMode: "expand",
+        headerColumnGroup: headerGroup,
+        rowsPerPageOptions: [5, 10, 25],
+        rowClassName: (rowdata) => `row-class-${rowdata.id}`,
+      }
+    } else {
+      propObj = { ...props };
+    }
+
+    return propObj;
+  };
+
   return (
     <div className="datatable" data-testid="table-test">
-      {selection ? (
-        <DataTable
-          ref={dt}
-          headerColumnGroup={headerGroup}
-          resizableColumns
-          columnResizeMode="expand"
-          value={tableData}
-          selectionMode="checkbox"
-          stripedRows={stripedRows}
-          // selection={selectedProducts}
-          showGridlines
-          // onSelectionChange={(e) => setSelectedProducts(e.value)}
-          dataKey={dataKey}
-          paginator={paginator}
-          rows={15}
-          rowsPerPageOptions={[5, 10, 25]}
-          responsiveLayout="scroll"
-          filters={filters}
-          filterDisplay="menu"
-          rowClassName={(rowdata) => `row-class-${rowdata.id}`}
-        >
-          {getColumns(columnHeaders)}
-        </DataTable>
-      ) : (
-        <DataTable
-          ref={dt}
-          value={tableData}
-          resizableColumns
-          columnResizeMode="fit"
-          stripedRows={stripedRows}
-          showGridlines
-          dataKey={dataKey}
-          rows={15}
-          responsiveLayout="scroll"
-          {...props}
-        >
-          {getColumns(columnHeaders)}
-        </DataTable>
-      )}
+      <DataTable {...tableProps()}>
+        {getColumns(columnHeaders)}
+      </DataTable>
     </div>
   );
 };
+
 export default TableGrid;
