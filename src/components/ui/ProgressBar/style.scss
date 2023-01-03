@@ -1,0 +1,11 @@
+.TableProgress{
+    background-color: #545250 !important;
+}
+.highlight-class{
+    background-image: url(../../../assets/images/custom-highlight.svg) !important;
+    background-repeat: no-repeat !important;
+}
+
+.p-progressbar-determinate .p-progressbar-value-animate{
+    transition: width 0s ease-in-out !important;
+}

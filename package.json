@@ -1,0 +1,60 @@
+{
+  "name": "ren_ngs_command_approver",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "json-server": "^0.17.1",
+    "merge": "^2.1.1",
+    "moment": "^2.29.4",
+    "oidc-client": "^1.11.5",
+    "primeicons": "^5.0.0",
+    "primereact": "^8.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropdown": "^1.10.0",
+    "react-redux": "^8.0.2",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^6.4.1",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.0.3",
+    "reactstrap": "^8.4.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "rimraf": "^2.6.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "ajv": "^6.12.6",
+    "cross-env": "^5.2.0",
+    "nan": "^2.15.0",
+    "react-scripts": "^4.0.3",
+    "sass": "^1.54.8"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "scripts": {
+    "start": "rimraf ./build && react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src/"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+export const API_BASE_URL = "https://localhost:5001/";
+export const GET_ASSETS = "api/assets";
+export const GET_ASSETS_RESTRICTED = "api/assetRestricted";
+export const GET_COMMANDS_STATE = "api/commandConfig";
+export const GET_STATES = "api/commandStates";
+export const GET_COMMAND_HISTORY = "api/audittrail";
+export const GET_COMMAND = "api/getCommands";
+export const GET_COMMAND_TRAIL = "api/configAuditTrail";
+export const UPDATE_COMMANDS = "api/updateCommands";
+export const GET_CONFIG_AUDITTRAIL = "api/configAuditTrail";

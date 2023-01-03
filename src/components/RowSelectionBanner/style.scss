@@ -1,0 +1,65 @@
+@import "../../sass/var/global.scss";
+@import "../../sass/mixins/global.scss";
+
+.closeSelectionBanner {
+    cursor: pointer;
+    float: right;
+}
+
+.RowSelectionBanner {
+    padding: 5px 15px 5px 15px;
+    @include themify($themes) {
+        background: themed("rowselectionbanner_bg");
+        box-shadow: themed("box_shadow_color");
+    }
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .vertical-divider {
+        border-right: 1px solid #FFFFFF;
+        margin: 0px 6px;
+        opacity: 0.15;
+    }
+
+    .row-select {
+        display: flex;
+
+        .selected-value {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            @include themify($themes) {
+                color: 1px solid themed("text_color");
+            }
+        }
+
+        .p-button {
+            padding: 4px 8px;
+            gap: 10px;
+            @include themify($themes) {
+                background: themed("rowselectionbanner_btn_bg") !important;
+                border: 1px solid themed("button_border_primary");
+            }
+            border-radius: 4px;
+
+            &-label {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 16px;
+                @include themify($themes) {
+                    color: themed("rowselectionbanner_btn_txt");
+                    text-shadow: themed("text_shadow_color");
+
+                }
+            }
+        }
+    }
+
+}
+
+.custom-hide {
+    visibility: hidden;
+}

@@ -1,0 +1,464 @@
+@import "../../sass/var/global.scss";
+@import "../../sass/mixins/global.scss";
+
+// .command-data{
+//     padding-left:5px;
+//     vertical-align: middle;
+// }
+.customToast{
+    align-items: baseline !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    width: 47rem !important;
+    color:#8B9CAD !important;
+}
+
+.redirecthistory{
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #85CDDB;
+    text-decoration: none;
+}
+.p-toast-message{
+    border:0px !important;
+    background: #1E6978 !important;
+    opacity: 1 !important;
+}
+
+.p-toast-bottom-center{
+    border:0px !important;
+}
+.vertical-divider{
+    border-right: 1px solid;
+    margin: 0px 6px;
+}
+.custom-toast{
+    .flex-column{
+        color:#F2F2F2 !important;
+    }
+}
+
+.toastresponse{
+    font-family: 'Museo Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+
+
+color: #F2F2F2;
+}
+.p-toast{
+    width: 50rem !important;
+    opacity: 1 !important;
+    border:0px !important;
+    color:#8B9CAD !important;
+}
+.p-column-filter-overlay{
+    @include themify($themes) {
+        background: themed("filter_overlay_bg") !important;
+    }
+    z-index: 1002 !important;
+    transform-origin: center top !important;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 20%) !important;
+    border-radius: 4px !important;
+    .p-inputtext{
+        @include themify($themes) {
+            background: themed("filter_search_input_bg") !important;
+        }
+        border: 1px solid #2A323B;
+        box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 2px;
+    }
+    .pi-search{
+        right: 0.75rem !important;
+        left:auto !important;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+    .p-input-icon-left{
+        padding-top:5px;
+    }
+    .p-input-icon-left > .p-inputtext{
+        padding-left:0.75rem;
+        padding-top:0rem;
+        padding-bottom:0.15rem;
+    }
+    .custom-wrapper{
+        overflow: auto;
+        max-height: 15vh;
+        
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: rgba(12, 15, 18, 0.5);
+        border-radius: 1px;
+        margin-top:10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #C5D2DE;
+        border-radius: 1px;
+    }
+    .p-checkbox{
+        margin-top:10px;
+        width:17px !important;
+        height:17px !important;
+        label{
+            margin-left:5px;
+            padding-top:3px;
+        }
+    }
+    .p-checkbox-box{
+        @include themify($themes) {
+            background: themed("filter_checkbox_bg") !important;
+        }
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2) !important;
+        border-radius: 4px !important;
+        border: 1px solid #8B9CAD !important;
+        border-radius: 2px !important;
+        width:17px !important;
+        height:17px !important;
+    }
+    .field-checkbox{
+        @include themify($themes) {
+            color: themed("filter_checkbox_label_bg") !important;
+        }
+        label{
+            margin-left:5px;
+            padding-top:3px;
+        }
+    }
+    .p-column-filter-constraint{
+        label{
+            @include themify($themes) {
+                color: themed("filter_checkbox_label_bg") !important;
+            }
+            margin-left:5px;
+            padding-top:3px;
+            font-family: 'Museo Sans';
+            font-style: normal;
+            font-weight: 100;
+            font-size: 12px;
+            line-height: 15px;
+            margin-bottom: 0px;
+        }
+    }
+    .p-column-filter-constraint:first-child{
+        @include themify($themes) {
+            color: themed("filter_checkbox_label_bg") !important;
+        }
+        font-family: 'Museo Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+    .p-column-filter-buttonbar{
+        border-top:1px solid black;
+        padding: 0.75rem 1.15rem 0.75rem 1.15rem !important;
+        .p-button-label{
+            font-family: 'Museo Sans';
+            font-style: normal;
+            font-weight: 200;
+            font-size: 11px;
+        }
+        .p-button[aria-label="Clear"]{
+            background: linear-gradient(179.99deg, #445A6C 0%, #38434E 62.27%, #38434E 99.55%);
+            border: 1px solid #283038;
+            border-radius: 2px;
+            padding: 0.1rem 1rem 0.1rem 1rem;
+            color:#ffffff
+        }
+        .p-button[aria-label="Apply"]{
+            background: linear-gradient(180deg, #237B8C 0%, #1E6978 99.8%);
+            border: 1px solid #1E6978;
+            border-radius: 2px;
+            padding: 0.1rem 1rem 0.1rem 1rem;
+            color:#ffffff
+        }
+    }
+    .p-input-icon-left>i, .p-input-icon-right>i, .p-input-icon-left>svg, .p-input-icon-right>svg, .p-input-icon-left>.p-input-prefix, .p-input-icon-right>.p-input-suffix{
+        margin-top: -0.34rem;
+    }
+    
+}
+
+.request-queue-wrapper {
+    .title {
+        font-family: $geinspira_font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.875rem;
+        line-height: 2.18rem;
+        // padding: 1.625rem 0rem 1.3rem 2.5rem;
+        padding: 4.625rem 0rem 0.1rem 7.1rem !important;
+    }
+
+    .RowBannerWrapper {
+        // height: 2.87rem;
+    }
+    .p-button {
+        color: #ffffff;
+        background:none !important;
+        border: none !important;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        border-radius: 6px;
+    }
+    .Add-btn{
+       font-size:11px;
+       cursor: pointer;
+       margin-right: 2rem;
+    }
+
+    .divider {
+        height: 0.187rem;
+        @include themify($themes) {
+            background: themed("landing_page_divider");
+        }
+    }
+
+    .p-datatable .p-datatable-tbody>tr>td {
+        .action-wrapper {
+            display: flex;
+            justify-content: space-around;
+            svg{
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+.elipsis-wrapper{
+    white-space: nowrap;
+    width:inherit;
+    /* width: -webkit-fill-available; */
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.command-request-modal {
+    font-family: 'Museo Sans' !important;
+
+    .p-dialog-header {
+        padding: 0.37rem 0.62rem !important;
+        @include themify($themes) {
+            background: themed("cmd_req_modal_title_bg");
+            color: themed("cmd_req_modal_title_txt");
+        }
+
+        .p-dialog-title {
+            font-weight: 600 !important;
+            font-size: 0.687rem !important;
+            line-height: 0.81rem;
+            letter-spacing: 0.5px;
+
+        }
+    }
+
+    .p-dialog-content {
+        @include themify($themes) {
+            background: themed("cmd_req_modal_dialog_content_bg");
+            color: themed("text_color");
+        }
+        padding: 0.75rem 1.687rem 1rem 1.687rem !important;
+    }
+
+    .datatable {
+        .p-datatable {
+            
+            .p-datatable-thead>tr>th {
+                @include themify($themes) {
+                    background: themed("cmd_req_modal_tb_bg");
+                    color: themed("cmd_req_tb_txt");
+                }
+                border: none;
+                padding: 0.37rem;
+                white-space: nowrap;
+                position: sticky;
+                top: 0;
+                z-index: 1;
+
+            }
+
+            .p-datatable-tbody {
+                font-size: 0.687rem;
+
+                tr {
+                    @include themify($themes) {
+                        background: themed("landingpage_tr_bg");
+                        color: themed("landingpage_tb_txt");
+                        border-bottom: 1px solid themed("button_border_primary");    
+                    }
+
+                    td {
+                        padding: 0.37rem;
+                        border: none;
+                        white-space: nowrap;
+
+                    }
+                }
+
+                .p-row-odd {
+                    background: #2F3841 !important;
+                }
+            }
+        }
+
+        .p-datatable-responsive-scroll>.p-datatable-wrapper {
+            max-height: 30vh;
+            overflow: auto;
+        }
+    }
+
+    .attempting-lable {
+        font-weight: 300;
+        font-size: 0.87rem;
+        line-height: 1.12rem;
+        @include themify($themes){
+            color: themed("cmd_req_modal_attempting_label");
+        }
+        margin-bottom: 0.25px;
+
+        .attempting-value {
+            font-weight: 600;
+            margin-left: 0.625rem;
+        }
+    }
+
+    .assets-count {
+        font-weight: 600;
+
+        svg {
+            margin-right: 4px;
+        }
+
+    }
+
+    .divider {
+        border-bottom: 0.1rem solid #1C252D;
+        margin-top: 0.7rem;
+        margin-bottom: 0.37rem;
+
+    }
+
+    .p-dialog-footer {
+        @include themify($themes) {
+            background: themed("cmd_req_modal_tb_bg");
+        }
+        border-top: 0.1rem solid #1C252D !important;
+        padding: 1.25rem 1.8rem 1rem 0rem !important;
+
+        .footer-wrapper {
+            .cancel-btn {
+
+                background: linear-gradient(179.99deg, #445A6C 0%, #38434E 62.27%, #38434E 99.55%);
+                border: 1px solid #283038;
+                border-radius: 2px;
+                height: 25px;
+                font-weight: 600;
+                font-size: 13px;
+            }
+
+            .action-btn {
+                background: linear-gradient(180deg, #237B8C 0%, #1E6978 99.8%);
+                border: 1px solid #1E6978;
+                border-radius: 2px;
+                height: 25px;
+                font-weight: 600;
+                font-size: 13px;
+            }
+        }
+    }
+    
+
+    // /* width */
+    // ::-webkit-scrollbar {
+    //     width: 6px;
+    //     height: 6px;
+    // }
+
+    // /* Track */
+    // ::-webkit-scrollbar-track {
+    //     background: rgba(12, 15, 18, 0.5);
+    //     border-radius: 1px;
+    //     margin-top: 27px;
+    // }
+
+    // /* Handle */
+    // ::-webkit-scrollbar-thumb {
+    //     background: #C5D2DE;
+    //     border-radius: 1px;
+    // }
+}
+// --------------------overriding prime react css --------------------------------------
+
+    .p-badge.p-badge-success {
+        background-color:#161617!important;
+        color: #ffffff;
+    }
+    .p-datatable .p-sortable-column:focus{
+        box-shadow:none !important;
+        outline: 0 none;
+    }
+
+    
+        ::-webkit-scrollbar {
+            width: 20% !important;
+          }
+           
+          ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)!important;
+           
+          }
+           
+          ::-webkit-scrollbar-thumb {
+            // background-color: darkgrey!important;
+            outline: 1px solid slategrey!important;
+            width: 50px !important;
+            border-radius: 5px;
+            background-color:#313131;
+          }
+      
+
+    // ::-webkit-scrollbar {
+
+    //     width: 6px;
+  
+    //     border-radius: 1px;
+  
+    //     background-color:white;
+  
+    //   }
+  
+    //   ::-webkit-scrollbar-thumb {
+  
+    //     height: 10px;
+  
+    //     border: 2px solid transparent;
+  
+    //     background-clip: content-box;
+  
+    //     border-radius: 2.5px;
+  
+    //     background-color: rgba(12, 15, 18, 0.24);
+  
+    //   }

@@ -1,0 +1,97 @@
+@import "./sass/var/global.scss";
+@import "./sass/mixins/global.scss";
+body {
+    margin: 0rem;
+    font-family: $museo_font;
+    @include themify($themes) {
+        background-color: themed("primary_color") !important;
+        color: themed("text_color") !important;
+      }
+      .customToast{
+        align-items: baseline !important;
+        display: flex !important;
+        justify-content: space-around !important;
+        width: 47rem !important;
+        color:#8B9CAD !important;
+    }
+    
+    .redirecthistory{
+        font-family: 'Museo Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #85CDDB;
+        text-decoration: none;
+    }
+    .p-toast-message{
+        border:0px !important;
+        background: #1E6978 !important;
+        opacity: 1 !important;
+    }
+    
+    .p-toast-bottom-center{
+        border:0px !important;
+    }
+    .vertical-divider{
+        border-right: 1px solid;
+        margin: 0px 6px;
+    }
+    .customToast{
+        .flex-column{
+            color:#F2F2F2 !important;
+        }
+        .turbine-wing-icon{
+          fill:#F2F2F2;
+        }
+    }
+    .Toastify__toast-container{
+      width: 51rem !important;
+
+    }
+    .Toastify__close-button{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .text-datalabel{
+      font-family: 'Museo Sans';
+      font-style: normal;
+      font-weight: 200;
+      font-size: 12px;
+      line-height: 15px;
+      color: #F2f2f2;
+    }
+    .text-label{
+      vertical-align: bottom;
+      font-family: 'Museo Sans';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .Toastify__toast{
+      background: #1E6978;
+      border-radius:0px;
+      min-height: 50px;
+    }
+    
+    .toastresponse{
+        font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+    
+    
+    color: #F2F2F2;
+    }
+    .p-toast{
+        width: 50rem !important;
+        opacity: 1 !important;
+        border:0px !important;
+        color:#8B9CAD !important;
+    }
+}

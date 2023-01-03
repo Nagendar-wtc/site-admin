@@ -1,0 +1,32 @@
+@import "../../../sass/var/global.scss";
+@import "../../../sass/mixins/global.scss";
+
+
+.text_area_wrapper{
+    margin: 20px 0px;
+
+    .title{
+        font-family: $museo_font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+
+.text_area{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    @include themify($themes){
+        background: themed("text_area_bg");
+        color: #FFFFFF;
+    }
+}
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+    font-size: 11px;
+ }

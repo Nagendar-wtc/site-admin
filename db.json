@@ -1,0 +1,247 @@
+{
+  "posts": [
+    {
+      "id": "5023423432",
+      "sitename": "sant andriyaas",
+      "src_Id": "1",
+      "source_Id": "saqibu",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "yes",
+      "timer": "1 Assets, 2 assets, 3 assets, 4 assets, 5 assets, 6 assets",
+      "action": "EDGE",
+      "protocol": "http",
+      "webService": "WindSCADA",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "503289258",
+      "sitename": "Austria",
+      "src_Id": "2",
+      "source_Id": "FERol",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "NO",
+      "timer": "6 Assets, 2 Assets, 25 assets, 23assets, 25 assets, 25 assets, 25 assets",
+      "action": "SAGA",
+      "protocol": "https",
+      "webService": "windAccess",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "5000902",
+      "sitename": "Hungry",
+      "src_Id": "3",
+      "source_Id": "loreum",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "yes",
+      "timer": "2 Assets",
+      "action": "SAGA",
+      "protocol": "http",
+      "webService": "VisoPro",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "5000903",
+      "sitename": "Coartia",
+      "src_Id": "4",
+      "source_Id": "Louis",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "NO",
+      "timer": "25 Assets",
+      "action": "SAGA",
+      "protocol": "https",
+      "webService": "VisoPro",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "5000904",
+      "sitename": "Algeria",
+      "src_Id": "5",
+      "source_Id": "Amo",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "NO",
+      "timer": "73 Assets",
+      "action": "EDGE",
+      "protocol": "http",
+      "webService": "WindSCADA",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "5000905",
+      "sitename": "Uganda",
+      "src_Id": "10",
+      "source_Id": "START",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "yes",
+      "timer": "24 Assets",
+      "action": "EDGE",
+      "protocol": "https",
+      "webService": "WindSCADA",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "5000906",
+      "sitename": "Sant francisco",
+      "src_Id": "11",
+      "source_Id": "STOP",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "NO",
+      "timer": "61 Assets",
+      "action": "EDGE",
+      "protocol": "http",
+      "webService": "WindSCADA",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "5000907",
+      "sitename": "Abu dhabi",
+      "src_Id": "15",
+      "source_Id": "RESET",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "yes",
+      "timer": "2 Assets",
+      "action": "EDGE",
+      "protocol": "http",
+      "webService": "VisoPro",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "100800",
+      "sitename": "Oman",
+      "src_Id": "18",
+      "source_Id": "MANUAL BATTERY TEST",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "NO",
+      "timer": "25 Assets",
+      "action": "EDGE",
+      "protocol": "https",
+      "webService": "windAccess",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    },
+    {
+      "id": "1004989",
+      "sitename": "New jursey",
+      "src_Id": "20",
+      "source_Id": "LOAD SHUTDOWN",
+      "sentBy": "http://10.119.176.67/sitewebhmi",
+      "receivedAt": "NO",
+      "timer": "73 Assets",
+      "action": "EDGE",
+      "protocol": "http",
+      "webService": "windAccess",
+      "credential": "1",
+      "Enable": "yes",
+      "Lastupdateby": "12:30",
+      "lastupdatedate": "10:30AM"
+    }
+ 
+  ],
+  "Assests": [
+    {
+      "id": 1,
+      "Aname": "1 Assets"
+    },
+    {
+      "id": 2,
+      "Aname": "2 assets"
+    },
+    {
+      "id": 3,
+      "Aname": "3 assets"
+    },
+    {
+      "id": 4,
+      "Aname": "4 assets"
+    },
+    {
+      "id": 5,
+      "Aname": "5 assets"
+    },
+    {
+      "id": 6,
+      "Aname": "6 assets"
+    }
+  ],
+  "CmdAdapter": [
+    {
+      "id": 5,
+      "Cmd": "EDGE"
+    },
+    {
+      "id": 8,
+      "Cmd": "SAGE"
+    }
+  ],
+  "Proto": [
+    {
+      "id": 6,
+      "PName": "http"
+    },
+    {
+      "id": 2,
+      "PName": "https"
+    }
+  ],
+  "Credential": [
+    {
+      "id": 7,
+      "Credent": "1"
+    },
+    {
+      "id": 2,
+      "Credent": "2"
+    },
+    {
+      "id": 3,
+      "Credent": "3"
+    },
+    {
+      "id": 4,
+      "Credent": "4"
+    },
+    {
+      "id": 5,
+      "Credent": "5"
+    }
+  ],
+  "WebService": [
+    {
+      "id": 1,
+      "WebName": "WindSCADA"
+    },
+    {
+      "id": 2,
+      "WebName": "WindAccess"
+    },
+    {
+      "id": 3,
+      "WebName": "VISUPRO"
+    }
+  ]
+}

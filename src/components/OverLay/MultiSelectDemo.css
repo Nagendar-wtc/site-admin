@@ -1,0 +1,52 @@
+/* MultiSelectDemo.css */
+
+.multiselect-demo .p-multiselect {
+    min-width: 15rem;
+    color:azure !important;
+}
+
+.multiselect-demo .multiselect-custom .p-multiselect-label:not(.p-placeholder):not(.p-multiselect-items-label) {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    
+}
+
+.multiselect-demo .multiselect-custom .country-item-value {
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    display: inline-flex;
+    margin-right: .5rem;
+    background-color:#313131;
+    color: azure !important;
+    
+}
+
+.multiselect-demo .multiselect-custom .country-item-value img.flag {
+    width: 17px;
+    
+}
+
+ .p-multiselect-header {
+    /* padding: 0.75rem 1.25rem; */
+    border-bottom: none;
+    /* color:#dee2e6 !important; */
+   background-color:#1c252d !important;
+    margin: 0;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.p-checkbox-box{
+    background-color:#495057!important;
+}
+.p-multiselect-panel.p-multiselect-items.p-multiselect-item {
+    margin: 0;
+    /* padding: 0.75rem 1.25rem; */
+    border: 0 none;
+    color: azure !important;;
+    background: transparent;
+    transition: box-shadow 0.2s;
+    border-radius: 0;
+}
+/* {
+    background-color: #495057!important;
+} */

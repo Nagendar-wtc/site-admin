@@ -1,0 +1,29 @@
+@import "../../sass/var/global.scss";
+@import "../../sass/mixins/global.scss";
+
+.header-banner {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+
+    @include themify($themes) {
+        color: themed("header_text_color");
+    }
+
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.5px;
+
+    .vertical-divider {
+        border-right: 1px solid;
+        margin: 0px 6px;
+    }
+    .group-turbine-icon{
+        height: 1rem;
+        width: 1rem;
+        margin-right: 0.5rem;
+        fill: #8694A1;
+    }
+}

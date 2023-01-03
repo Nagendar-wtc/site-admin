@@ -1,0 +1,142 @@
+@import "../../../sass/var/global.scss";
+@import "../../../sass/mixins/global.scss";
+
+.datatable {
+    .p-datatable {
+        font-family: $museo_font;
+        
+        .p-checkbox .p-checkbox-box{
+            background: transparent;
+            border-radius: 2px;
+            border-color: #8B9CAD;
+            .p-checkbox-icon {
+                transition-duration: 0.2s;
+                color: #47ADC1;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            }
+        .p-datatable-thead {
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 15px;
+          tr:first-child .p-column-title{
+            margin:auto;
+            font-size:13px;
+            color:white;
+           }
+
+            .pi-filter-icon::before {
+                content: url("../../../assets/images/filter-icon.svg");
+              }
+              .p-selection-column{
+                .p-column-header-content{
+                    justify-content: center;
+                   
+                }
+              }
+        }
+
+        .p-datatable-thead>tr>th {
+            @include themify($themes) {
+                background-color: themed("primary_color");
+                color: #999999;
+            }
+        }
+
+        .p-datatable-tbody {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 30px;
+            color: #F2F2F2;
+            tr{
+                background: #1E1E1F;
+                color: #F2F2F2;
+            }
+            tr.p-highlight {
+                background: #20393D;
+                color: #F2F2F2 !important;
+            }
+            .p-row-odd{
+                background: #262627 !important;
+            }
+            .p-row-odd.p-highlight {
+                background: #20393D !important;
+                color: #F2F2F2 !important;
+            }
+        }
+        .p-datatable-tbody > tr > td {
+           padding: 0.375rem 0.75rem; 
+        }
+        &.p-datatable-gridlines {
+            .p-datatable-tbody > tr > td {
+            border-width: 0px 1px;
+            border-color: #333333;
+        }
+        .p-datatable-thead > tr > th {
+            border-width: 0px 1px;
+            border-color: #333333;
+        }
+    }
+    .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover {
+        @include themify($themes) {
+            background-color: themed("primary_color");
+            color: #999999;
+        }
+    }
+    .p-sortable-column.p-highlight:not(.p-sortable-disabled):hover {
+        @include themify($themes) {
+            background-color: themed("primary_color");
+            color: #999999;
+        }
+    }
+    }
+}
+
+.datatable .table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+    .datatable .table-header {
+        align-items: flex-start;
+    }
+}
+
+.datatable .product-image {
+    width: 100px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.datatable .p-dialog .product-image {
+    width: 150px;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+.datatable .confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+    .datatable .p-toolbar {
+        flex-wrap: wrap;
+    }
+
+    .datatable .p-toolbar .p-button {
+        margin-bottom: 0.25rem;
+    }
+
+    .datatable .table-header {
+        flex-direction: column;
+    }
+
+    .datatable .table-header .p-input-icon-left,
+    .datatable .table-header input {
+        width: 100%;
+    }
+}

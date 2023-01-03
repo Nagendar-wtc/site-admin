@@ -1,0 +1,129 @@
+@import "../../sass/var/global.scss";
+@import "../../sass/mixins/global.scss";
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    
+
+    @include themify($themes) {
+        background-color: themed("header_color");
+    }
+
+    .menu-tab {
+        display: flex;
+       
+        
+
+        .ge-logo-wrapper {
+            width: 4.1rem;  
+            // background: radial-gradient(91.62% 91.62% at 37.53% 0%, #1B4E58 0%, #1C252D 100%);
+            box-shadow: inset -1px 0px 0px rgba(0, 0, 0, 0.140379);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+           .ge-logo {
+                width: 1.778125rem;
+                height: 1.778125rem;
+                
+            }
+           
+        }
+        .logo-divider{
+            border-right: 1px solid white;
+            line-height: 5px ;
+        }
+
+        .p-tabmenu .p-tabmenu-nav {
+            border: none;
+            margin-left:30px;
+            .p-tabmenuitem {
+                &:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+                    @include themify($themes) {
+                        background: themed("header_color");
+                        border-color: #38434E;
+                        color: #999999;
+                    }
+                }
+
+                .p-menuitem-link {
+                    @include themify($themes) {
+                        background: themed("header_color");
+                        border-color: #38434E;
+                        color: #999999;
+                    }
+
+                    &:not(.p-disabled):focus {
+                        box-shadow: none;
+                    }
+
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    border-bottom: 3px solid;
+                    border-radius: 0px;
+                }
+            }
+
+            .p-tabmenuitem.p-highlight {
+                .p-menuitem-link {
+                    @include themify($themes) {
+                        background: themed("header_color");
+                        border-color: #85CDDB;
+                        color: themed("text_color");
+                    }
+
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+    }
+
+    .menu-profile {
+        display: flex;
+        padding: 18px 0px;
+
+        .blocked-list {
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+
+            .turbine-wing-icon {
+                width: 1rem;
+                height: 1rem;
+                margin: 0rem 0.5rem;
+                fill: #8694A1;
+            }
+
+            .blocked-icon {
+                width: 1rem;
+                height: 1rem;
+                margin: 0rem 0.5rem;
+            }
+
+            .right-icon {
+                width: 1rem;
+                height: 1rem;
+                margin: 0rem 0.5rem;
+            }
+        }
+
+        .vertical-divider {
+            border-right: 1px solid #38434E;
+            margin: 0px 6px;
+        }
+
+        .MainDropdown {
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+    }
+}

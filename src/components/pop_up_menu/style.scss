@@ -1,0 +1,40 @@
+@import "../../sass/var/global.scss";
+@import "../../sass/mixins/global.scss";
+
+.EllipsisDivWrapper{
+max-width: 85%;
+overflow: hidden;
+display: inline-block;
+text-overflow: ellipsis;
+};
+
+.pop-wrapper{
+    width: 150px;
+    
+    border-radius:5px ;
+    line-break:  100px;
+    margin: 15rem;
+    background-color:#161617;
+    // border:1px solid white
+}
+.table-wrapper{
+    width:98%;
+    height: 10px;
+    // border-spacing:collapse;
+    border-bottom-right-radius:5px ;
+    border-bottom-left-radius:5px ;
+   
+}
+td,th{
+    // border:  1px solid blue;
+    padding: 8px;
+    text-align: left;
+    border: spacing 10px;;
+    // border:2px solid white;
+    
+   
+}
+tr{
+    background-color: #38434E
+    
+}
