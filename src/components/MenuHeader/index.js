@@ -16,7 +16,7 @@ import { ReactComponent as GELogo } from ".././../assets/images/GE-logo.svg";
 const MenuHeader = (props) => {
   let items = [];
   let navigate = useNavigate();
-  let activeTabIndex = (location.pathname == "/history-page") ? 1 : 0;
+  let activeTabIndex = (window.location.pathname == "/history-page") ? 1 : 0;
 
   let {
     handleChange,
