@@ -10,6 +10,7 @@ import { InputText } from "primereact/inputtext";
 import ButtonComponent from "../ui/ButtonComponent";
 import { MultiSelect } from "primereact/multiselect";
 import dropdownoption from "../../utils/dummyData/DropDownData.json";
+import ToggleSwitch from "../customToggle";
 
 const overLayContent = (props) => {
   const { Cities, countries, states, District } = dropdownoption;
@@ -269,10 +270,15 @@ const overLayContent = (props) => {
                   Automation
                 </p>
 
-                <InputSwitch
+                {/* <InputSwitch
                   checked={toggle}
                   onChange={() => settoggle(!toggle)}
-                />
+                /> */}
+                 <ToggleSwitch
+                id="newsletter"
+                checked={toggle}
+                onChange={() => settoggle(!toggle)}
+              />
 
                 {/* <p>{toggle ? "true" : "false"}</p> */}
               </div>

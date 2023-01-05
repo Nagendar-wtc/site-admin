@@ -388,77 +388,37 @@ color: #F2F2F2;
             }
         }
     }
-    
-
-    // /* width */
-    // ::-webkit-scrollbar {
-    //     width: 6px;
-    //     height: 6px;
-    // }
-
-    // /* Track */
-    // ::-webkit-scrollbar-track {
-    //     background: rgba(12, 15, 18, 0.5);
-    //     border-radius: 1px;
-    //     margin-top: 27px;
-    // }
-
-    // /* Handle */
-    // ::-webkit-scrollbar-thumb {
-    //     background: #C5D2DE;
-    //     border-radius: 1px;
-    // }
 }
-// --------------------overriding prime react css --------------------------------------
-
-    .p-badge.p-badge-success {
-        background-color:#161617!important;
-        color: #ffffff;
+.p-datatable-wrapper {
+    overflow-y: hidden !important;
+    overflow-x: scroll !important;
+    &::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 1px;
+      background-color: rgba(12, 15, 18, 0.24);
     }
-    .p-datatable .p-sortable-column:focus{
-        box-shadow:none !important;
-        outline: 0 none;
+    &::-webkit-scrollbar-thumb {
+      height: 100px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+      border-radius: 2.5px;
+      background-color: rgba(12, 15, 18, 0.24);
     }
+}  
+button.p-column-filter-menu-button.p-link {
+    box-shadow: none;
+}
 
-    
-        ::-webkit-scrollbar {
-            width: 20% !important;
-          }
-           
-          ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)!important;
-           
-          }
-           
-          ::-webkit-scrollbar-thumb {
-            // background-color: darkgrey!important;
-            outline: 1px solid slategrey!important;
-            width: 50px !important;
-            border-radius: 5px;
-            background-color:#313131;
-          }
-      
-
-    // ::-webkit-scrollbar {
-
-    //     width: 6px;
-  
-    //     border-radius: 1px;
-  
-    //     background-color:white;
-  
-    //   }
-  
-    //   ::-webkit-scrollbar-thumb {
-  
-    //     height: 10px;
-  
-    //     border: 2px solid transparent;
-  
-    //     background-clip: content-box;
-  
-    //     border-radius: 2.5px;
-  
-    //     background-color: rgba(12, 15, 18, 0.24);
-  
-    //   }
+.p-column-filter-menu-button.p-link.p-column-filter-menu-button-open {
+        background-color: transparent;
+        box-shadow: none;
+}
+th.p-sortable-column.p-resizable-column.p-highlight {
+    box-shadow: none;
+}
+.datatable .p-datatable .p-datatable-thead tr:first-child .p-column-title {
+    margin: auto;
+    font-size: 11px;
+    color: white;
+    font-weight: 700;
+}
