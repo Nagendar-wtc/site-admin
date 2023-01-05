@@ -89,6 +89,8 @@ $focus-color: #ff0;
     border: 0 solid $label-colour;
     border-radius: 20px;
     transition: all 0.3s ease-in 0s;
+    background: #38434E 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
   }
   &-checkbox:checked + &-label {
     .toggle-switch-inner {
@@ -96,6 +98,8 @@ $focus-color: #ff0;
     }
     .toggle-switch-switch {
       right: 0px;
+      background: #38434E 0% 0% no-repeat padding-box;
+      border: 1px solid #FFFFFF;
     }
   }
   &.small-switch {
@@ -112,6 +116,8 @@ $focus-color: #ff0;
       width: 16px;
       right: 20px;
       margin: 2px;
+      background: #38434E 0% 0% no-repeat padding-box;
+      border: 1px solid #FFFFFF;
     }
   }
   @media screen and (max-width: 991px) {

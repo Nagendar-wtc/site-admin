@@ -348,7 +348,6 @@ export default function LandingPage(props) {
         <div style={{ textAign: "right", float: "right" }}>
           <p
             className="Add-btn"
-            buttonText=""
             onClick={overLayCreateButton}
           >+ ADD NEW SITE</p>
         </div>
