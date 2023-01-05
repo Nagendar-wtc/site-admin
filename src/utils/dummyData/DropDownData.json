@@ -4,22 +4,21 @@
         { "id": "1", "name": "Loreum1" },
         { "id": "2", "name": "Loreum2" },
         { "id": "3", "name": "Loreum3" }
-    
       ],
-      "states" : [
-        { "id": "1",  "name": "5000903" },
-        { "id": "2",  "name": "5000904" },
-        { "id": "3",  "name": "5000905" }
-      ],
-      "Cities" : [
-        { "id": "1",  "name": "1" },
-        { "id": "2", "name": "2" },
-        { "id": "3",  "name": "3" }
-    
-      ],
-      "District":[
-        {"id":"1","cityId":"1","name":"forrole"},
-        {"id":"2","cityId":"2","name":"Workplace"},
-        {"id":"3","cityId":"3","name":"Austin"}
-      ]
-      }
+    "states" : [
+      { "id": "1",  "name": "5000903" },
+      { "id": "2",  "name": "5000904" },
+      { "id": "3",  "name": "5000905" }
+    ],
+    "Cities" : [
+      { "id": "1",  "name": "1" },
+      { "id": "2", "name": "2" },
+      { "id": "3",  "name": "3" }
+  
+    ],
+    "District":[
+      {"id":"1","cityId":"1","name":"forrole"},
+      {"id":"2","cityId":"2","name":"Workplace"},
+      {"id":"3","cityId":"3","name":"Austin"}
+    ]
+}

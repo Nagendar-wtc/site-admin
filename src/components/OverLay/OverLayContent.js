@@ -12,6 +12,7 @@ import dropdownoption from "../../utils/dummyData/DropDownData.json";
 import CustomDropdown from "../ui/CustomDropdown";
 import MultiSelectDropdown from "../ui/MultiSelectDropdown";
 import ToggleSwitch from "../customToggle";
+import InputData from "../ui/InputComponent";
 
 const overLayContent = (props) => {
   const { Cities, countries, states, District } = dropdownoption;
@@ -90,41 +91,9 @@ const overLayContent = (props) => {
     setCrendenData(e.target.value);
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formvalues, [name]: value });
-    console.log(formvalues);
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setFormErrors(validate(formvalues));
-    // setIsSubmit(true);
   };
-  // useEffect(() => {
-  //   if (Object.keys(formError).length === 0 && isSubmit) {
-  //     console.log(formvalues);
-  //   }
-  // }, [formError]);
-  // const validate = (values) => {
-  //   const regex =
-  //     /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-  //   const errors = {};
-  //   if (!values.SiteId) {
-  //     errors.SiteId = "Site Id is required";
-  //   }
-  //   if (!values.SrcId) {
-  //     errors.SrcId = "Src Id is required";
-  //   }
-  //   if (!values.SourceId) {
-  //     errors.SourceId = "Source Id is required";
-  //    }
-  //   if (!values.WebHMIURL) {
-  //     errors.WebHMIURL = "WebHMIURL Id is required";
-  //   } else if (!regex.test(values.WebHMIURL)) {
-  //     errors.WebHMIURL = "This is not valid Url !";
-  //   }
-  //   return errors;
-  // };
 
   const save = () => {
     const data = {
@@ -134,7 +103,6 @@ const overLayContent = (props) => {
       src_Id: city,
       source_Id: districtt,
       sentBy: value1,
-
       receivedAt: toggle == true ? "yes" : "No",
       timer: Exclude,
       action: Cmd,
@@ -158,7 +126,6 @@ const overLayContent = (props) => {
       .then((response) => response.json())
       .then((json) => json.data)
       .catch((error) => {
-        // element.parentElement.innerHTML = `Error: ${error}`;
         console.error("There was an error!", error);
       });
   };
@@ -167,29 +134,28 @@ const overLayContent = (props) => {
     <React.Fragment>
       <div>
         <form onSubmit={handleSubmit}>
-          <OverLayHeader/>
+          <OverLayHeader />
           <div className="Main_Heading">
             <div>
               <div className="OverView">Overview</div>
               <div className="Site_MainHeading">Site Details</div>
               <div className="Site_Heading">
                 <div>
-                  <CustomDropdown 
+                  <CustomDropdown
                     label={'Site Name'}
                     options={countries}
                     value={country}
                     optionLabel={"name"}
                     className="SiteId"
                     placeholder="select"
-                    appendTo="self"                    
-                    onChange={handleCountry} 
-                    showOnFocus={""} 
+                    appendTo="self"
+                    onChange={handleCountry}
+                    showOnFocus={""}
                   />
                 </div>
                 <div className="SiteIDD">
-                  {/* <p className="Site_Heading_title"> </p> */}
                   <InputData
-                  label={"Site Id"}
+                    label={"Site Id"}
                     onChange={handleState}
                     className="label-field"
                     text="SrcId"
@@ -198,13 +164,10 @@ const overLayContent = (props) => {
                     value={state ? state : "-"} // that is called terinary opertor
                     disabled
                   />
-
-                  {/* <p style={{ color: "red" }}>{formError.SrcId}</p> */}
                 </div>
                 <div className="heading">
-                  {/* <p className="Site_Heading_title"></p> */}
                   <InputData
-                  label={"Src Id"}
+                    label={"Src Id"}
                     className="label-field"
                     text="SrcId"
                     name="SrcId"
@@ -214,16 +177,13 @@ const overLayContent = (props) => {
                     onChange={handleCity}
                     value={city ? city : "-"}
                   />
-                  {/* <p style={{ color: "red" }}>{formError.srcId}</p> */}
                 </div>
               </div>
             </div>
-
             <div className="Sourceid">
               <div>
-                {/* <p className="Site_Heading_title"></p> */}
                 <InputData
-                label={"Source ID"}
+                  label={"Source ID"}
                   className="label-field"
                   text="SorceId"
                   name="SourceId"
@@ -233,37 +193,16 @@ const overLayContent = (props) => {
                   onChange={handleDistrict}
                 />
               </div>
-
               <div className="WebHMI">
-                {/* <p className="Site_Heading_title"></p> */}
-
                 <InputData
-                label={"Web HMI URL"}
+                  label={"Web HMI URL"}
                   className="Site_Heading_text"
                   value={value1}
                   onChange={(e) => setValue1(e.target.value)}
                 />
-               {/* <p style={{ color: "red" }}>{formError.WebHMIURL}</p> */}
               </div>
-
               <div>
-                {/* <p className="Site_Heading_title" style={{ color: "white" }}>
-                  Cmd Adapter Id
-                </p>
-                <Dropdown
-                  className="CmdAdapter"
-                  options={dropdownJsonData.CmdAdapter.map((t) => ({
-                    label: t.Cmd,
-                    value: t.Cmd,
-                  }))}
-                  onChange={Adapter}
-                  appendTo="self"
-                  placeholder=""
-                  value={Cmd}
-                  showOnFocus={""}
-                /> */}
-
-                <CustomDropdown 
+                <CustomDropdown
                   label={'Cmd Adapter Id'}
                   options={dropdownJsonData.CmdAdapter.map((t) => ({
                     label: t.Cmd,
@@ -273,12 +212,11 @@ const overLayContent = (props) => {
                   className="CmdAdapter"
                   appendTo="self"
                   placeholder="select"
-                  onChange={Adapter}  
+                  onChange={Adapter}
                   showOnFocus={""}
                 />
               </div>
             </div>
-
             <hr className="hr_heading"></hr>
             <div className="Application" style={{ color: "white" }}>
               Application Configuration
@@ -289,28 +227,26 @@ const overLayContent = (props) => {
                   {" "}
                   Automation
                 </p>
-                 <ToggleSwitch
-                id="newsletter"
-                checked={toggle}
-                onChange={() => settoggle(!toggle)}
-              />
-
-                {/* <p>{toggle ? "true" : "false"}</p> */}
+                <ToggleSwitch
+                  id="newsletter"
+                  checked={toggle}
+                  onChange={() => settoggle(!toggle)}
+                />
               </div>
               <div className="Exclude_heading">
-              <MultiSelectDropdown
-                 className="Exlude"
-                 label = "Exclude Assets"
-                 options={dropdownJsonData.Assests.map((result) => ({
-                   label: result.Aname,
-                   value: result.Aname,
-                 }))}
-                 value={Exclude}
-                 appendTo="self"
-                 onChange={hello}
-                 filter
-                 maxSelectedLabels={3}
-                 />
+                <MultiSelectDropdown
+                  className="Exlude"
+                  label="Exclude Assets"
+                  options={dropdownJsonData.Assests.map((result) => ({
+                    label: result.Aname,
+                    value: result.Aname,
+                  }))}
+                  value={Exclude}
+                  appendTo="self"
+                  onChange={hello}
+                  filter
+                  maxSelectedLabels={3}
+                />
               </div>
             </div>
 
@@ -321,65 +257,49 @@ const overLayContent = (props) => {
               </h4>
               <div className="DropSource">
                 <div>
-                  <CustomDropdown 
+                  <CustomDropdown
                     label={'Protocol'}
                     options={dropdownJsonData.Proto.map((result) => ({
                       label: result.PName,
                       value: result.PName,
                     }))}
-                    value={ProtocolAssests}            
+                    value={ProtocolAssests}
                     className="Protocol"
                     placeholder="select"
-                    appendTo="self"                    
-                    showOnFocus={""} 
+                    appendTo="self"
+                    showOnFocus={""}
                   />
                 </div>
-                <div className="WebService_Heading">   
-                  <CustomDropdown 
+                <div className="WebService_Heading">
+                  <CustomDropdown
                     label={'WebService Type'}
                     options={dropdownJsonData.WebService.map((result) => ({
                       label: result.WebName,
                       value: result.WebName,
                     }))}
-                    value={Web}            
+                    value={Web}
                     className="DropDownItems"
                     placeholder="select"
-                    appendTo="self"      
-                    onChange={WebServicee}              
-                    showOnFocus={""} 
+                    appendTo="self"
+                    onChange={WebServicee}
+                    showOnFocus={""}
                   />
                 </div>
               </div>
               <div className="CrdentialData">
                 <div>
-                  {/* <p className="Creden" style={{ color: "white" }}>
-                    Credentials
-                  </p>
-                  <Dropdown
-                    className="Creden"
-                    options={dropdownJsonData.Credential.map((result) => ({
-                      label: result.Credent,
-                      value: result.Credent,
-                    }))}
-                    onChange={CredenData}
-                    placeholder=""
-                    appendTo="self"
-                    value={CrendenData}
-                    showOnFocus={""}
-                  /> */}
-
-                 <CustomDropdown 
+                  <CustomDropdown
                     label={'Credentials'}
                     options={dropdownJsonData.Credential.map((result) => ({
                       label: result.Credent,
                       value: result.Credent,
                     }))}
-                    value={CrendenData}            
+                    value={CrendenData}
                     className="Creden"
                     placeholder="select"
-                    appendTo="self"      
-                    onChange={CredenData}              
-                    showOnFocus={""} 
+                    appendTo="self"
+                    onChange={CredenData}
+                    showOnFocus={""}
                   />
                 </div>
                 <div className="Enable_btn">
@@ -388,16 +308,15 @@ const overLayContent = (props) => {
                   </p>
                   <div>
                     <ToggleSwitch
-                id="overlay-toogle2"
-                checked={checked}
-                onChange={() => setchecked(!checked)}
-              />
+                      id="overlay-toogle2"
+                      checked={checked}
+                      onChange={() => setchecked(!checked)}
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
           <div className=" Btnn">
             <ButtonComponent className="cancel-btnn" buttonText={"Cancel"} />
             <ButtonComponent

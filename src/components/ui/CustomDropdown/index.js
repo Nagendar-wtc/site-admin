@@ -23,8 +23,8 @@ const CustomDropdown = (props) => {
 
 CustomDropdown.propTypes = {
   label: PropTypes.string,
-  options: PropTypes.object,
-  value: PropTypes.string,
+  options: PropTypes.array,
+  value: PropTypes.any,
   optionLabel: PropTypes.string,
   className: PropTypes.string,
   placeholder: PropTypes.string,

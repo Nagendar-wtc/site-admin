@@ -7,7 +7,6 @@ import "./style.scss";
 
 const OverLayHeader = (props) => {
   let {selectedData, edittableItem} = props;
-  console.log(selectedData ,"saqib10")
   return (
     <>
     <div style={{ padding: "10px", background: "#1C252D" }}>
@@ -22,14 +21,6 @@ const OverLayHeader = (props) => {
                 <Label label={"Add New Site"}  componentcls="configarationLabel" ></Label>
 
               } 
-              {/* {edittableItem ? (
-              <Label label={"Add New Site"} componentcls="configarationLabel" />
-               ):(
-              <Container>
-                <Label label={"Hello"}  componentcls="configarationLabel" ></Label>
-</Container>
-              )}   */}
-
             </div>
           </div>
         </div>

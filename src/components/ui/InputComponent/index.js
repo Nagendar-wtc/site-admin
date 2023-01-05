@@ -7,7 +7,7 @@ const InputData = (props) => {
    
   return (
       <>
-          <div style={{ color: 'white', marginBottom:'15px', fontSize: '12px' }}>{label}</div>
+          <div style={{ color: 'white', marginBottom:'7px', fontSize: '12px' }}>{label}</div>
           <InputText
             name={name}
             options={options}

@@ -20,17 +20,12 @@ export const CustomFilter = ({ options, optionsList }) => {
   };
 
   const onSelectAllChange = (e) => {
-    // const selectedItems = [...checkList];
-    // console.log(selectedItems, "23 saqib");
-
     if (e.checked) {
       debugger
       setSelectAll(true);
-      // selectedItems.push(e.value);
       options.filterCallback(optionsList);
     } else {
       setSelectAll(false);
-
     }
   };
 

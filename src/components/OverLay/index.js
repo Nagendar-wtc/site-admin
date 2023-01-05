@@ -52,8 +52,6 @@ const OverLay = (props) => {
       </div>
     </>
   );
-
-  console.log(props.isOverlay, "hello");
   return (
     <Sidebar
       visible={showConfigurationOverlay}
