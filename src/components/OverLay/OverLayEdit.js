@@ -3,12 +3,12 @@
 /* eslint-disable */
 import React, { useState, useEffect } from "react";
 import { Dropdown } from "primereact/dropdown";
-import { InputSwitch } from "primereact/inputswitch";
+import Inputswitch from "../ui/RadioButton";
 import dropdownJsonData from "../../utils/dummyData/commandAuditTrail.json";
 import "./style.scss";
 import { InputText } from "primereact/inputtext";
 import ButtonComponent from "../ui/ButtonComponent";
-import { MultiSelect } from "primereact/multiselect";
+import MultiSelectDropdown from "../ui/MultiSelectDropdown";
 import OverLayHeader from "./OverLayHeader";
 import dropdownoption from "../../utils/dummyData/DropDownData.json";
 import OverLayEditHeader from "./OverLayAddSiteHeader";
@@ -274,30 +274,24 @@ const OverLayEdit = (props) => {
             </div>
             <div className="Application_title">
               <div className="toggle">
-                <p className="ExcludeAssests" style={{ color: "white" }}>
-                  Automation
-                </p>
-
-                <InputSwitch
+                <Inputswitch
+                 label="Automation"
                   checked={toggle}
                   onChange={() => settoggle(!toggle)}
                 />
               </div>
               <div className="Exclude_Heading_Title">
-                <p className="ExcludeAssests" style={{ color: "white" }}>
-                  Exclude Assets
-                </p>
-
-                <MultiSelect
-                  className="Exlude"
-                  options={dropdownJsonData.Assests.map((result) => ({
+                <MultiSelectDropdown
+                    label="Exclude Assets"
+                    className="Exlude"
+                    options={dropdownJsonData.Assests.map((result) => ({
                     label: result.Aname,
                     value: result.Aname,
                   }))}
                   value={Exclude}
                   appendTo="self"
                   onChange={hello}
-                />
+                /> 
               </div>
             </div>
 
@@ -363,11 +357,9 @@ const OverLayEdit = (props) => {
                   />
                 </div>
                 <div className="Enable_btnEdit">
-                  <p className="Proto" style={{ color: "white" }}>
-                    Enable/Disable
-                  </p>
                   <div>
-                    <InputSwitch
+                    <Inputswitch
+                     label="Enable/Disable"
                       checked={checked}
                       onChange={(e) => setchecked(e.value)}
                     />

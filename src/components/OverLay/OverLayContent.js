@@ -2,15 +2,15 @@
 /* eslint-disable */
 import React, { useState, useEffect, useId } from "react";
 import { Dropdown } from "primereact/dropdown";
-import { InputSwitch } from "primereact/inputswitch";
+import Inputswitch from "../ui/RadioButton";
 import dropdownJsonData from "../../utils/dummyData/commandAuditTrail.json";
 import "./style.scss";
 import OverLayHeader from "./OverLayHeader";
 import { InputText } from "primereact/inputtext";
 import ButtonComponent from "../ui/ButtonComponent";
-import { MultiSelect } from "primereact/multiselect";
 import dropdownoption from "../../utils/dummyData/DropDownData.json";
 import CustomDropdown from "../ui/CustomDropdown";
+import MultiSelectDropdown from "../ui/MultiSelectDropdown";
 import ToggleSwitch from "../customToggle";
 
 const overLayContent = (props) => {
@@ -294,22 +294,19 @@ const overLayContent = (props) => {
                 {/* <p>{toggle ? "true" : "false"}</p> */}
               </div>
               <div className="Exclude_heading">
-                <p className="ExcludeAssests" style={{ color: "white" }}>
-                  Exclude Assets
-                </p>
-
-                <MultiSelect
-                  className="Exlude"
-                  options={dropdownJsonData.Assests.map((result) => ({
-                    label: result.Aname,
-                    value: result.Aname,
-                  }))}
-                  value={Exclude}
-                  appendTo="self"
-                  onChange={hello}
-                  filter
-                  maxSelectedLabels={3}
-                />
+              <MultiSelectDropdown
+                 className="Exlude"
+                 label = "Exclude Assets"
+                 options={dropdownJsonData.Assests.map((result) => ({
+                   label: result.Aname,
+                   value: result.Aname,
+                 }))}
+                 value={Exclude}
+                 appendTo="self"
+                 onChange={hello}
+                 filter
+                 maxSelectedLabels={3}
+                 />
               </div>
             </div>
 
