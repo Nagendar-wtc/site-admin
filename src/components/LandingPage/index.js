@@ -111,7 +111,6 @@ export default function LandingPage(props) {
 
   let headerGroup = (
     <DataTable
-      value={tableData}
       resizableColumns="true"
       columnResizeMode="expand"
       onColumnResize
@@ -325,74 +324,6 @@ export default function LandingPage(props) {
     setIsOverlay(false);
   };
 
-  let modalColumnHeaders = [
-    {
-      headerName: "Case Type",
-      colId: "ID",
-      field: "id",
-      style: {
-        width: "5%",
-      },
-    },
-    {
-      headerName: "Included Site",
-      colId: "asset",
-      field: "",
-      style: {
-        width: "10%",
-      },
-    },
-    {
-      headerName: "Excluded Site",
-      colId: "commandName",
-      field: "command",
-      style: {
-        width: "20%",
-      },
-    },
-    {
-      headerName: "Sent By",
-      colId: "sentBy",
-      field: "user",
-      style: {
-        width: "20%",
-      },
-    },
-    {
-      headerName: `Received At (${new Date()
-        .toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "long" })
-        .substring(4)
-        .match(/\b(\w)/g)
-        .join("")})`,
-      colId: "receivedAt",
-      field: "receivedTimestamp",
-      style: {
-        width: "5%",
-      },
-      component: (rowData) => (
-        <span>
-          {moment.unix(rowData.receivedTimestamp).format("DD MMM YY  h:mm:ss")}
-        </span>
-      ),
-    },
-    {
-      headerName: "Timer",
-      colId: "timer",
-      field: "receivedTimestamp",
-      style: {
-        width: "20%",
-        minWidth: "100px",
-      },
-      component: (rowData) => (
-        <ProgressBarComponent
-          ProgressClass="TableProgress"
-          value={rowData.receivedTimestamp}
-          data={rowData}
-        ></ProgressBarComponent>
-      ),
-    },
-  ];
-
   const rowBannerAction = (action) => {
     setShowCommandsModal({
       visable: true,
@@ -405,7 +336,7 @@ export default function LandingPage(props) {
       <div className="title">SITE ADMIN</div>
 
       <div>
-        <div className="RowBannerWrapper">
+        <div>
           {showRowBanner && (
             <RowSelectionBanner
               selectionCount={selectedAssets.length}
@@ -497,13 +428,7 @@ export default function LandingPage(props) {
                 {showCommandsModal.action}
               </span>
             </div>
-
             <div className="divider" />
-            <TableGrid
-              tableData={showCommandsModal.rowData}
-              columnHeaders={modalColumnHeaders}
-              selection={false}
-            />
             <TextAreaComponent
               row_count={5}
               column_count={80}

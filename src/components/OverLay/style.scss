@@ -1647,8 +1647,10 @@ padding-left: 180px;
   padding-left: 5rem;
 }
 .CrdentialData {
-  padding-top: 84px;
-  padding-bottom: 100px;
+  // padding-top: 63px;
+  // padding-top: 63px;
+  // padding-bottom: 100px;
+  padding: 63px 0 100px 75px;
   display: inline-flex;
 }
 .CredenView {
@@ -2018,7 +2020,6 @@ padding-left: 180px;
   background-color: rgb(42, 50, 59);
 }
 .Creden {
-  margin-left: 75px;
   width: 14.5rem;
   height: 2rem;
   font-size: 12px;

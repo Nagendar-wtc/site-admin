@@ -15,7 +15,7 @@ class SubscriptionUtility extends React.Component {
   }
 
   getHMILanguageLabel(str = "", description = false) {
-    if (str != undefined && (typeof str === "string" || str instanceof String)) {
+    if (str !== undefined && (typeof str === "string" || str instanceof String)) {
       let { langaugeLabelsForNames = {} } = SubscriptionUtility.statProps;
       let obj = langaugeLabelsForNames[str.toUpperCase()] || {};
       let desc = description ? obj.description : "";

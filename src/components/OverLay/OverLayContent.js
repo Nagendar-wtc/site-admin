@@ -10,6 +10,7 @@ import { InputText } from "primereact/inputtext";
 import ButtonComponent from "../ui/ButtonComponent";
 import { MultiSelect } from "primereact/multiselect";
 import dropdownoption from "../../utils/dummyData/DropDownData.json";
+import CustomDropdown from "../ui/CustomDropdown";
 import ToggleSwitch from "../customToggle";
 
 const overLayContent = (props) => {
@@ -173,16 +174,17 @@ const overLayContent = (props) => {
               <div className="Site_MainHeading">Site Details</div>
               <div className="Site_Heading">
                 <div>
-                  <p className="Site_Heading_title">Site Name</p>
-
-                  <Dropdown
+                  <CustomDropdown 
+                    label={'Site Name'}
                     options={countries}
                     value={country}
                     optionLabel={"name"}
                     className="SiteId"
-                    appendTo="self"
-                    onChange={handleCountry}
-                  ></Dropdown>
+                    placeholder="select"
+                    appendTo="self"                    
+                    onChange={handleCountry} 
+                    showOnFocus={""} 
+                  />
                 </div>
                 <div className="SiteIDD">
                   <p className="Site_Heading_title">Site Id </p>
@@ -230,7 +232,7 @@ const overLayContent = (props) => {
               </div>
 
               <div className="WebHMI">
-                <p className="Site_Heading_title">WebHMIURL</p>
+                <p className="Site_Heading_title">Web HMI URL</p>
 
                 <InputText
                   className="Site_Heading_text"
@@ -241,8 +243,8 @@ const overLayContent = (props) => {
               </div>
 
               <div>
-                <p className="Site_Heading_title" style={{ color: "white" }}>
-                  cmdAdapterId
+                {/* <p className="Site_Heading_title" style={{ color: "white" }}>
+                  Cmd Adapter Id
                 </p>
                 <Dropdown
                   className="CmdAdapter"
@@ -254,6 +256,20 @@ const overLayContent = (props) => {
                   appendTo="self"
                   placeholder=""
                   value={Cmd}
+                  showOnFocus={""}
+                /> */}
+
+                <CustomDropdown 
+                  label={'Cmd Adapter Id'}
+                  options={dropdownJsonData.CmdAdapter.map((t) => ({
+                    label: t.Cmd,
+                    value: t.Cmd,
+                  }))}
+                  value={Cmd}
+                  className="CmdAdapter"
+                  appendTo="self"
+                  placeholder="select"
+                  onChange={Adapter}  
                   showOnFocus={""}
                 />
               </div>
@@ -299,49 +315,43 @@ const overLayContent = (props) => {
 
             <div>
               <hr className="hr"></hr>
-              <h4 className=" Source_Protocol">
+              <h4 className="Source_Protocol">
                 Source Protocol Configuration
               </h4>
               <div className="DropSource">
                 <div>
-                  <p className="Proto" style={{ color: "white" }}>
-                    Protocol
-                  </p>
-                  <Dropdown
-                    className="Protocol"
+                  <CustomDropdown 
+                    label={'Protocol'}
                     options={dropdownJsonData.Proto.map((result) => ({
                       label: result.PName,
                       value: result.PName,
                     }))}
-                    appendTo="self"
-                    onChange={Protocol}
-                    placeholder=""
-                    value={ProtocolAssests}
-                    showOnFocus={""}
+                    value={ProtocolAssests}            
+                    className="Protocol"
+                    placeholder="select"
+                    appendTo="self"                    
+                    showOnFocus={""} 
                   />
                 </div>
-
-                <div className="WebService_Heading">
-                  <p className="Proto" style={{ color: "white" }}>
-                    WebService Type
-                  </p>
-                  <Dropdown
-                    className="DropDownItems"
+                <div className="WebService_Heading">   
+                  <CustomDropdown 
+                    label={'WebService Type'}
                     options={dropdownJsonData.WebService.map((result) => ({
                       label: result.WebName,
                       value: result.WebName,
                     }))}
-                    onChange={WebServicee}
-                    placeholder=""
-                    appendTo="self"
-                    value={Web}
-                    showOnFocus={""}
+                    value={Web}            
+                    className="DropDownItems"
+                    placeholder="select"
+                    appendTo="self"      
+                    onChange={WebServicee}              
+                    showOnFocus={""} 
                   />
                 </div>
               </div>
               <div className="CrdentialData">
                 <div>
-                  <p className="Creden" style={{ color: "white" }}>
+                  {/* <p className="Creden" style={{ color: "white" }}>
                     Credentials
                   </p>
                   <Dropdown
@@ -355,6 +365,20 @@ const overLayContent = (props) => {
                     appendTo="self"
                     value={CrendenData}
                     showOnFocus={""}
+                  /> */}
+
+                 <CustomDropdown 
+                    label={'Credentials'}
+                    options={dropdownJsonData.Credential.map((result) => ({
+                      label: result.Credent,
+                      value: result.Credent,
+                    }))}
+                    value={CrendenData}            
+                    className="Creden"
+                    placeholder="select"
+                    appendTo="self"      
+                    onChange={CredenData}              
+                    showOnFocus={""} 
                   />
                 </div>
                 <div className="Enable_btn">

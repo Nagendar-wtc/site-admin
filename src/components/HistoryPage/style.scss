@@ -66,25 +66,28 @@
 }
 
 .p-dropdown-panel{
-    margin-top:1px;
+    margin-top:5px;
+
     .p-dropdown-items-wrapper{
         overflow: hidden;
         
         .p-dropdown-items{
             background-color:black;
-            
+
             .p-dropdown-item{
-                color: #F2F2F2;
+                color: rgb(149, 158, 161);
+                background-color:#1C252D !important;
                 font-family: 'Museo Sans';
                 font-style: normal;
                 font-weight: 300;
+                font-size: 12px;
             }
             .p-dropdown-panel.p-dropdown-items{
                 padding: 0rem !important;
             }
 
             .p-dropdown-item:hover{
-                background: transparent !important;
+                background:#acc9e6 !important;
                 color:#F2F2F2 !important;
                 font-weight: 400;
             }
