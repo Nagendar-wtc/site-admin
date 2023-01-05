@@ -4,7 +4,6 @@ import './ToggleSwitch.scss';
 
 
 const ToggleSwitch = ({ id, name, checked, onChange, optionLabels, small, disabled }) => {
-
   return (
     <div className={"toggle-switch" + (small ? " small-switch" : "")}>
       <input

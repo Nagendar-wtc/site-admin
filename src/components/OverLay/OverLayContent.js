@@ -269,11 +269,6 @@ const overLayContent = (props) => {
                   {" "}
                   Automation
                 </p>
-
-                {/* <InputSwitch
-                  checked={toggle}
-                  onChange={() => settoggle(!toggle)}
-                /> */}
                  <ToggleSwitch
                 id="newsletter"
                 checked={toggle}
@@ -367,11 +362,11 @@ const overLayContent = (props) => {
                     Enable/Disable
                   </p>
                   <div>
-                    <InputSwitch
-                      value={checked}
-                      checked={checked}
-                      onChange={(e) => setchecked(e.value)}
-                    />
+                    <ToggleSwitch
+                id="overlay-toogle2"
+                checked={checked}
+                onChange={() => setchecked(!checked)}
+              />
                   </div>
                 </div>
               </div>
