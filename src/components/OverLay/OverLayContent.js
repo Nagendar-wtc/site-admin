@@ -97,8 +97,8 @@ const overLayContent = (props) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormErrors(validate(formvalues));
-    setIsSubmit(true);
+    // setFormErrors(validate(formvalues));
+    // setIsSubmit(true);
   };
   // useEffect(() => {
   //   if (Object.keys(formError).length === 0 && isSubmit) {
@@ -187,8 +187,9 @@ const overLayContent = (props) => {
                   />
                 </div>
                 <div className="SiteIDD">
-                  <p className="Site_Heading_title">Site Id </p>
-                  <InputText
+                  {/* <p className="Site_Heading_title"> </p> */}
+                  <InputData
+                  label={"Site Id"}
                     onChange={handleState}
                     className="label-field"
                     text="SrcId"
@@ -201,8 +202,9 @@ const overLayContent = (props) => {
                   {/* <p style={{ color: "red" }}>{formError.SrcId}</p> */}
                 </div>
                 <div className="heading">
-                  <p className="Site_Heading_title">Src Id</p>
-                  <InputText
+                  {/* <p className="Site_Heading_title"></p> */}
+                  <InputData
+                  label={"Src Id"}
                     className="label-field"
                     text="SrcId"
                     name="SrcId"
@@ -219,8 +221,9 @@ const overLayContent = (props) => {
 
             <div className="Sourceid">
               <div>
-                <p className="Site_Heading_title">Source ID</p>
-                <InputText
+                {/* <p className="Site_Heading_title"></p> */}
+                <InputData
+                label={"Source ID"}
                   className="label-field"
                   text="SorceId"
                   name="SourceId"
@@ -232,14 +235,15 @@ const overLayContent = (props) => {
               </div>
 
               <div className="WebHMI">
-                <p className="Site_Heading_title">Web HMI URL</p>
+                {/* <p className="Site_Heading_title"></p> */}
 
-                <InputText
+                <InputData
+                label={"Web HMI URL"}
                   className="Site_Heading_text"
                   value={value1}
                   onChange={(e) => setValue1(e.target.value)}
                 />
-               <p style={{ color: "red" }}>{formError.WebHMIURL}</p>
+               {/* <p style={{ color: "red" }}>{formError.WebHMIURL}</p> */}
               </div>
 
               <div>

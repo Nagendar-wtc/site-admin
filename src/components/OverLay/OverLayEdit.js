@@ -12,6 +12,7 @@ import MultiSelectDropdown from "../ui/MultiSelectDropdown";
 import OverLayHeader from "./OverLayHeader";
 import dropdownoption from "../../utils/dummyData/DropDownData.json";
 import OverLayEditHeader from "./OverLayAddSiteHeader";
+import InputData from "../ui/InputComponent/index"
 
 const OverLayEdit = (props) => {
   const { edittableItem } = props;
@@ -151,34 +152,34 @@ const OverLayEdit = (props) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormErrors(validate(formvalues));
-    setIsSubmit(true);
+    // setFormErrors(validate(formvalues));
+    // setIsSubmit(true);
   };
-  useEffect(() => {
-    if (Object.keys(formError).length === 0 && isSubmit) {
-      console.log(formvalues);
-    }
-  }, [formError]);
-  const validate = (values) => {
-    const regex =
-      /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-    const errors = {};
-    if (!values.SiteId) {
-      errors.SiteId = "Site Id is required";
-    }
-    if (!values.SrcId) {
-      errors.SrcId = "Src Id is required";
-    }
-    if (!values.SourceId) {
-      errors.SourceId = "Source Id is required";
-    }
-    if (!values.WebHMIURL) {
-      errors.WebHMIURL = "WebHMIURL Id is required";
-    } else if (!regex.test(values.WebHMIURL)) {
-      errors.WebHMIURL = "This is not valid Url !";
-    }
-    return errors;
-  };
+  // useEffect(() => {
+  //   if (Object.keys(formError).length === 0 && isSubmit) {
+  //     console.log(formvalues);
+  //   }
+  // }, [formError]);
+  // const validate = (values) => {
+  //   const regex =
+  //     /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  //   const errors = {};
+  //   if (!values.SiteId) {
+  //     errors.SiteId = "Site Id is required";
+  //   }
+  //   if (!values.SrcId) {
+  //     errors.SrcId = "Src Id is required";
+  //   }
+  //   if (!values.SourceId) {
+  //     errors.SourceId = "Source Id is required";
+  //   }
+  //   if (!values.WebHMIURL) {
+  //     errors.WebHMIURL = "WebHMIURL Id is required";
+  //   } else if (!regex.test(values.WebHMIURL)) {
+  //     errors.WebHMIURL = "This is not valid Url !";
+  //   }
+  //   return errors;
+  // };
 
 
 
@@ -235,10 +236,12 @@ const OverLayEdit = (props) => {
               </div>
 
               <div className="">
-                <p className="Title_Heading_wrapper">WebHMIURL</p>
+                {/* <p className="Title_Heading_wrapper"></p> */}
 
-                <InputText
-                  autoComplete="off"
+
+                <InputData
+              label={"WebHMIURL"}
+              autoComplete="off"
                   className="Site_Heading_text"
                   text="WebHMIURL"
                   name="WebHMIURL"

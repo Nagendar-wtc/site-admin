@@ -118,13 +118,13 @@ const overLayView = (props) => {
                   <p className="ExcludeAssests" style={{ color: "white" }}>
                     Exclude Assets
                   </p>
-                  {/* <p style={{ color: "darkgrey" }}>{selectedData.timer}</p> */}
+                  {/* <p style={{ color: "darkgrey" }}>{selectedData.timer}</p>
                        {readMore ? <p className="showwrapper">{selectedData.timer}</p> : `${selectedData.timer.slice(0, 8)}...`}
                        {selectedData.timer.length > 8 ? (
                       <button className="btn-show-less" onClick={handleSubmitReadmore}>
                         {readMore ? "show less" : "read more"}
                       </button>
-                      ) : (" ") } 
+                      ) : (" ") }  */}
                 </div>
               </div>
 
